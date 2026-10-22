@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101014" />
+    <title>The Forever Class Finder — WoW Forever</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="script.js" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="sigil" aria-hidden="true">✧</div>
+          <div>
+            <div class="eyebrow">Azeroth · Personal Discovery</div>
+            <div class="brandname">THE FOREVER CLASS FINDER</div>
+          </div>
+        </div>
+        <div class="top-actions">
+          <button class="btn subtle" id="saveBtn" type="button">
+            Save progress</button
+          ><button class="btn subtle" id="resetBtn" type="button">
+            Start over
+          </button>
+        </div>
+      </header>
+      <main>
+        <section id="welcomeScreen" class="screen">
+          <div class="hero">
+            <div class="eyebrow">
+              Your character. Your story. Your forever main.
+            </div>
+            <h1>Find the class you’ll want to play <span>forever.</span></h1>
+            <p>
+              A guided decision journey built from your Forever Class Finder
+              workbook. Separate non-negotiables from preferences, compare class
+              fantasy with real gameplay, and discover a main worth returning
+              to.
+            </p>
+          </div>
+          <div class="hero-grid">
+            <div class="panel">
+              <h2>Not just another class quiz.</h2>
+              <ul class="feature-list">
+                <li>
+                  <span class="dot">✦</span
+                  ><span
+                    ><b>Filter first.</b> Hard deal-breakers remove classes that
+                    cannot meet your needs.</span
+                  >
+                </li>
+                <li>
+                  <span class="dot">✦</span
+                  ><span
+                    ><b>Score transparently.</b> Weighted preferences rank the
+                    candidates that remain.</span
+                  >
+                </li>
+                <li>
+                  <span class="dot">✦</span
+                  ><span
+                    ><b>Choose a specialization.</b> Compare the actual fantasy
+                    and gameplay loop.</span
+                  >
+                </li>
+                <li>
+                  <span class="dot">✦</span
+                  ><span
+                    ><b>Verify in-game.</b> Leave with a tailored trial plan,
+                    runner-up, and decision record.</span
+                  >
+                </li>
+              </ul>
+              <div style="margin-top: 22px">
+                <button class="btn primary" id="beginBtn">
+                  Begin your discovery <span aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+            <aside class="panel">
+              <div class="eyebrow">The journey</div>
+              <h3>Five stages. One considered decision.</h3>
+              <div class="pill-row" style="margin-bottom: 16px">
+                <span class="tag gold">01 · Identity</span
+                ><span class="tag">02 · Activities</span
+                ><span class="tag">03 · Lifestyle</span
+                ><span class="tag">04 · Class fit</span
+                ><span class="tag">05 · Specialization</span>
+              </div>
+              <p class="muted">
+                Expect a thoughtful assessment rather than a speed test. Answer
+                for the character you’d happily play for hundreds of hours—not
+                the one that sounds strongest on paper.
+              </p>
+              <div class="notice">
+                This tool follows the workbook’s nine-class / 27-specialization
+                framework. WoW Forever mechanics may change; treat the result as
+                a reasoned shortlist to verify in-game, not a promise about
+                current balance.
+              </div>
+            </aside>
+          </div>
+        </section>
+        <section id="assessmentScreen" class="screen hidden">
+          <div class="progress-wrap">
+            <div class="progress-top">
+              <span id="stageLabel">Stage 1 of 5</span
+              ><span id="progressLabel">0% complete</span>
+            </div>
+            <div
+              class="progress"
+              role="progressbar"
+              aria-label="Assessment progress"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="0"
+              id="progressBar"
+            >
+              <div id="progressFill"></div>
+            </div>
+          </div>
+          <div class="steps" id="stepPills"></div>
+          <div id="stageContent" class="panel"></div>
+          <div class="footer-nav">
+            <button class="btn" id="backBtn" type="button">← Back</button>
+            <div class="nav-right">
+              <button class="btn primary" id="nextBtn" type="button">
+                Continue →
+              </button>
+            </div>
+          </div>
+          <div id="validation" class="error" role="alert"></div>
+        </section>
+        <section id="resultsScreen" class="screen hidden"></section>
+      </main>
+      <div class="footer-note">
+        The Forever Class Finder · A personal-fit tool based on your workbook ·
+        No meta rankings, no random winners.
+      </div>
+    </div>
+  </body>
+</html>
